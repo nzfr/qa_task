@@ -1,14 +1,40 @@
 import React from "react";
 
 type Props = {
-    variant: 'SUCCESS',
+    variant: 'Filled' | 'Outlined',
+    type?: 'Success' | 'Error'
     title:string,
-    icon?: JSX.Element
+    icon?: JSX.Element,
+    onClick?: () => void
 }
 
-const Button = ({variant,title,icon}:Props) => {
-    const bgColor = variant === 'SUCCESS' ? 'bg-green-27' : 'bg-green-50'
-    return <button className={`flex flex-row justify-center items-center gap-2 ${bgColor} text-white p-2 rounded-lg font-bold text-xs`}>
+const Button = ({variant,type,title,icon, onClick}:Props) => {
+    const styles = () => {
+        switch (variant){
+            case "Filled":
+                if (type === 'Success'){
+                    return 'filled-success-button'
+                }
+                if (type === 'Error'){
+                    return 'filled-error-button'
+                }
+                break;
+            case "Outlined":
+                if (type === 'Success'){
+                    return 'outlined-success-button'
+                }
+                if (type === 'Error'){
+                    return 'outlined-error-button'
+                }
+                break;
+            default:
+                return 'filled-success-button'
+
+
+        }
+    }
+
+    return <button onClick={onClick} className={`custom-button ${styles()}`}>
         {icon ?? icon}
         {title}
     </button>

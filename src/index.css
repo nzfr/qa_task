@@ -27,7 +27,33 @@ code {
     box-shadow: 0 3px 50px -1px rgba(50, 50, 71, 0.05);
   }
 
-  .button {
-
+  .questionCard {
+    @apply flex flex-col justify-start items-start bg-questionCardBg rounded-lg;
+    box-shadow: 0 3px 8px -1px rgba(50, 50, 71, 0.05), 0 0 1px rgba(12, 26, 75, 0.24);
   }
+
+  .custom-button {
+    @apply flex flex-row justify-center items-center gap-2 text-white p-2 rounded-lg font-bold text-xs
+  }
+
+  .filled-success-button {
+    @apply bg-green-27 text-white hover:bg-white hover:text-green-27 hover:border hover:border-green-27
+  }
+
+  .outlined-success-button {
+    @apply bg-white border border-green-27 text-green-27 hover:text-white hover:border-none hover:bg-green-27
+  }
+
+  .filled-error-button {
+    @apply bg-red-400 text-white hover:bg-white hover:text-red-400 hover:border hover:border-red-400
+  }
+
+  .outlined-error-button {
+    @apply bg-white border border-red-400 text-red-400 hover:text-white hover:border-none hover:bg-red-400
+  }
+
+  .question-card-header {
+    @apply flex flex-row justify-start items-center gap-4
+  }
+
 }

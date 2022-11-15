@@ -1,0 +1,73 @@
+{
+  "questions": [
+    {
+      "id": "1001",
+      "questionsTitle": "مشکل Auth در React",
+      "questionsDesc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "userName": "امیر نظری فر",
+      "avatar": "https://i.pravatar.cc/150?img=11",
+      "images": [],
+      "answers": []
+    },
+    {
+      "id": "1002",
+      "questionsTitle": "مشکل Auth در React",
+      "questionsDesc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "userName": "امیر نظری فر",
+      "avatar": "https://i.pravatar.cc/150?img=11",
+      "images": [],
+      "answers": []
+    }
+  ],
+  "answers": [
+    {
+      "id": "10",
+      "questionId": "1001",
+      "userName": "آقای مهندس",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "likesCount": "20",
+      "dislikesCount": "10"
+    },
+    {
+      "id": "11",
+      "questionId": "1002",
+      "userName": "آقای مهندس",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "likesCount": "20",
+      "dislikesCount": "10"
+    },
+    {
+      "id": "12",
+      "questionId": "1002",
+      "userName": "آقای مهندس",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "likesCount": "20",
+      "dislikesCount": "10"
+    },
+    {
+      "id": "13",
+      "questionId": "1002",
+      "userName": "آقای مهندس",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "likesCount": "20",
+      "dislikesCount": "10"
+    },
+    {
+      "id": "14",
+      "questionId": "1001",
+      "userName": "آقای مهندس",
+      "createdTime": "16:48",
+      "createdDate": "1400/02/15",
+      "likesCount": "20",
+      "dislikesCount": "10"
+    }
+  ]
+}

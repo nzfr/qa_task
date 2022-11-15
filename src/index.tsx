@@ -1,20 +1,24 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Appbar from './Appbar'
-import reportWebVitals from './reportWebVitals'
-import AppRoutes from "./components/routes/AppRoutes";
+
+const Appbar = lazy(() => import('./components/app-bar/Appbar'))
+const AppRoutes = lazy(() => import('./components/routes/AppRoutes'))
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
+const renderLoader = () => (
+    <div className="w-full h-screen flex flex-col items-center justify-center">
+        <span>Loading ...</span>
+    </div>
+);
+
 root.render(
     <React.StrictMode>
-        <AppRoutes>
-            <Appbar/>
-        </AppRoutes>
+       <Suspense fallback={renderLoader()}>
+           <AppRoutes>
+               <Appbar/>
+           </AppRoutes>
+       </Suspense>
     </React.StrictMode>,
 )
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@persian-tools/react-persian-tools": "^0.3.2",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -28,7 +29,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"./**/*.ts\" \"./**/*.tsx\"",
     "lint:fix": "eslint --fix \"./**/*.ts\" \"./**/*.tsx\"",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "web-server": "json-server --watch web-server/db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [

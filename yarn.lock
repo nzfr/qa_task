@@ -1557,6 +1557,20 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@persian-tools/persian-tools@^1.6.0-beta.4":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@persian-tools/persian-tools/-/persian-tools-1.7.1.tgz#99f5cd1fa03d3caa8b72458e5bd56e791880a513"
+  integrity sha512-Gxw5L3CLw+Jp4OHffd/jkH3a0LoBSK/yooCSkpOv0YIjgMJOxYtuAte4T7jQS2FyqYq+sxTDDjuTEZ2kWbaQPA==
+  dependencies:
+    fastest-levenshtein "^1.0.12"
+
+"@persian-tools/react-persian-tools@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@persian-tools/react-persian-tools/-/react-persian-tools-0.3.2.tgz#bbe190bf90e033272163e7a6aec066bb2ea327e0"
+  integrity sha512-Uzhu1CGHJ6MynuJISF7yiIfg4SRR6VRIRYnmke9/upsKyPmGqmVk1aVjmth4JMc+ZKrdyIhoHEhTzhiE/cKczw==
+  dependencies:
+    "@persian-tools/persian-tools" "^1.6.0-beta.4"
+
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@pkgr/utils/-/utils-2.3.1.tgz#0a9b06ffddee364d6642b3cd562ca76f55b34a03"
@@ -4400,6 +4414,11 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
+
+fastest-levenshtein@^1.0.12:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.16.tgz#210e61b6ff181de91ea9b3d1b84fdedd47e034e5"
+  integrity sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==
 
 fastq@^1.6.0:
   version "1.13.0"
