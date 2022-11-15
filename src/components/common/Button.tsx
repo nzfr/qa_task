@@ -5,10 +5,11 @@ type Props = {
     type?: 'Success' | 'Error'
     title:string,
     icon?: JSX.Element,
-    onClick?: () => void
+    onClick?: () => void,
+    className?:string
 }
 
-const Button = ({variant,type,title,icon, onClick}:Props) => {
+const Button = ({variant,type,title,icon, onClick,className}:Props) => {
     const styles = () => {
         switch (variant){
             case "Filled":
@@ -34,7 +35,7 @@ const Button = ({variant,type,title,icon, onClick}:Props) => {
         }
     }
 
-    return <button onClick={onClick} className={`custom-button ${styles()}`}>
+    return <button onClick={onClick} className={`custom-button ${styles()} ${className ?? ''}`}>
         {icon ?? icon}
         {title}
     </button>
