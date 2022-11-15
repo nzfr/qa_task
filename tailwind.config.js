@@ -8,6 +8,7 @@ module.exports = {
         appBarBg:'#FFFFFF',
         mainBg:'#F7F8F9',
         questionCardBg:'#F9F9F9',
+        textAreaBorder: "#EEEEEE",
         neutral:{
           black:'#222222'
         },
