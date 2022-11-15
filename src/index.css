@@ -20,3 +20,14 @@ body {
 code {
   font-family: 'Yekan',sans-serif;
 }
+
+@layer components {
+  .appBar {
+    @apply w-full h-16 bg-appBarBg flex flex-row justify-between items-center;
+    box-shadow: 0 3px 50px -1px rgba(50, 50, 71, 0.05);
+  }
+
+  .button {
+
+  }
+}

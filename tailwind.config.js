@@ -4,6 +4,20 @@ module.exports = {
   darkMode: false, // or 'm
   theme: {
     extend: {
+      colors:{
+        appBarBg:'#FFFFFF',
+        mainBg:'#F7F8F9',
+        green:{
+          27:'#27AE60'
+        },
+        grey:{
+          9:'#9CAEBB',
+          45:'#454545'
+        }
+      },
+      backgroundImage: {
+        'avatar-img': "url('https://i.pravatar.cc/300')",
+      },
       fontFamily: {
         iYekan: ['YEKAN', 'sans-serif'],
       },
