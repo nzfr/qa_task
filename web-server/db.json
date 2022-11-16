@@ -58,8 +58,8 @@
       "userAvatar": "https://i.pravatar.cc/150?img=11",
       "createdTime": "16:48",
       "createdDate": "1400/02/15",
-      "likesCount": "20",
-      "dislikesCount": "10"
+      "likesCount": 12,
+      "dislikesCount": 12
     },
     {
       "id": "14",
@@ -156,8 +156,8 @@
     },
     {
       "questionId": "7IxZaAr",
-      "dislikesCount": 1,
-      "likesCount": 2,
+      "dislikesCount": 6,
+      "likesCount": 6,
       "content": "this is a answer",
       "userAvatar": "https://i.pravatar.cc/150?img=11",
       "userName": "Mr.0.8672253132578518",
@@ -167,8 +167,8 @@
     },
     {
       "questionId": "7IxZaAr",
-      "dislikesCount": "0",
-      "likesCount": "0",
+      "dislikesCount": 9,
+      "likesCount": 10,
       "content": "this is an answer",
       "userAvatar": "https://i.pravatar.cc/150?img=11",
       "userName": "Mr.0.9828729000598941",
@@ -178,8 +178,8 @@
     },
     {
       "questionId": "7IxZaAr",
-      "dislikesCount": "0",
-      "likesCount": "0",
+      "dislikesCount": 25,
+      "likesCount": 26,
       "content": "this is an answersdsd",
       "userAvatar": "https://i.pravatar.cc/150?img=11",
       "userName": "Mr.0.96271444822923",

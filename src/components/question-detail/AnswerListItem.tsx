@@ -21,10 +21,10 @@ const AnswerListItem = ({answerItem}: Props) => {
 
     const toggleLike = (isLike: boolean) => {
         dispatch(likeOrDislikeAnswer({
-            count: answerItem.dislikesCount,
+            count: isLike ? answerItem.likesCount : answerItem.dislikesCount,
             id: answerItem.id,
             isLike: isLike
-        })).then((response) => {
+        })).then(() => {
             dispatch(getQuestionDetail({questionId: answerItem.questionId}))
         })
     }
