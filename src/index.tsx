@@ -1,12 +1,13 @@
 import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom/client'
+import {store} from "./store/store";
+import {Provider} from "react-redux";
 import './index.css'
 
-const Appbar = lazy(() => import('./components/app-bar/Appbar'))
-const AppRoutes = lazy(() => import('./components/routes/AppRoutes'))
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
+const App = lazy(() => import('./App'))
 const renderLoader = () => (
     <div className="w-full h-screen flex flex-col items-center justify-center">
         <span>Loading ...</span>
@@ -14,11 +15,9 @@ const renderLoader = () => (
 );
 
 root.render(
-    <React.StrictMode>
-       <Suspense fallback={renderLoader()}>
-           <AppRoutes>
-               <Appbar/>
-           </AppRoutes>
-       </Suspense>
-    </React.StrictMode>,
+    <Suspense fallback={renderLoader()}>
+       <Provider store={store}>
+           <App/>
+       </Provider>
+    </Suspense>,
 )

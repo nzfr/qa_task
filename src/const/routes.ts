@@ -1,11 +1,10 @@
-import {lazy, LazyExoticComponent} from "react";
+import QuestionsList from "../components/quesitions-list/QuestionsList";
+import QuestionDetail from "../components/question-detail/QuestionDetail";
 
-const QuestionsList = lazy(() => import('../components/quesitions-list/QuestionsList'))
-const QuestionDetail = lazy(() => import('../components/question-detail/QuestionDetail'))
 
 type RouteType = {
     path: string
-    component: LazyExoticComponent<() => JSX.Element>;
+    component: () => JSX.Element;
 }
 
 export const routes: RouteType[] = [
