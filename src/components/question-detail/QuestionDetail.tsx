@@ -12,6 +12,7 @@ const QuestionDetail = () => {
     const navigator = useNavigate();
     const [newAnswer, setNewAnswer] = useState<string>('')
     const state = useAppSelector(state => state.questionDetailState)
+    const [showAnswerInputError, setShowAnswerInputError] = useState<boolean>(false)
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -23,9 +24,18 @@ const QuestionDetail = () => {
 
     }, [])
 
+    useEffect(() => {
+        if (showAnswerInputError && newAnswer.length > 0){
+            setShowAnswerInputError(false)
+        }
+    },[newAnswer])
+
     const addNewAnswer = () => {
         const today = new Date();
-        if (!state.question || !newAnswer) return;
+        if (!state.question || !newAnswer) {
+            setShowAnswerInputError(true);
+            return;
+        }
         const params: AnswerDTO = {
             questionId: state.question.id,
             dislikesCount: '0',
@@ -45,17 +55,20 @@ const QuestionDetail = () => {
 
     return <div>
         {!state.question && <p>Loading</p>}
-        {state.question && <div className='flex flex-col gap-6'>
+        {state.question && <div className='flex flex-col'>
             <QuestionListItem showImages={true} questionItem={state.question}/>
-            <div className='font-extrabold text-2xl'>پاسخ ها</div>
-            {state.question.answers.map((answer) => <AnswerListItem key={answer.id} answerItem={answer}/>)}
+            <div className='font-extrabold mt-6 mb-4 text-2xl'>پاسخ ها</div>
+            <div className='flex flex-col gap-y-6'>
+                {state.question.answers.map((answer) => <AnswerListItem key={answer.id} answerItem={answer}/>)}
+            </div>
             <div>
-                <div className='font-extrabold text-2xl'>پاسخ خود را ثبت کنید</div>
+                <div className='font-extrabold text-2xl mt-6'>پاسخ خود را ثبت کنید</div>
                 <p className='text-sm font-bold text-grey-45 mt-8'>پاسخ خود را بنویسید</p>
                 <textarea value={newAnswer} onChange={(e) => setNewAnswer(e.target.value)}
-                          className='w-full h-40 border border-textAreaBorder mt-4 p-4 rounded-md'
+                          className={`w-full h-40 border ${showAnswerInputError ? 'border-errorText' : 'border-textAreaBorder'} mt-4 p-4 rounded-md`}
                           placeholder='متن پاسخ ... '/>
-                <Button disabled={state.status === 'loading'} onClick={addNewAnswer} className='px-16' variant='Filled'
+                {showAnswerInputError && <span className='text-errorText text-xs my-2'>لطفا پاسخ را وارد کنید</span> }
+                <Button disabled={state.status === 'loading'} onClick={addNewAnswer} className='px-16 mt-6' variant='Filled'
                         type='Success'
                         title='ارسال پاسخ'/>
             </div>

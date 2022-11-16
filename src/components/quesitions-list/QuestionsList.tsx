@@ -15,7 +15,7 @@ const QuestionsList = () => {
         }
     }, [])
 
-    return <div className='flex flex-col gap-4'>
+    return <div className='flex flex-col gap-y-5'>
         {questions.questions && questions.questions.map(question => {
             return <QuestionListItem showImages={false} key={question.id} questionItem={question}/>
         })}
