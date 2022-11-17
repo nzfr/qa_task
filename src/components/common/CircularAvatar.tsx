@@ -17,6 +17,6 @@ const CircularAvatar = ({ img, altImg, variant }: Props) => {
         return 'rounded-md'
     }
   }
-  return <img src={img} alt={altImg ?? ''} className={`${roundedVariant()} h-11 w-11`} />
+  return <img src={img} alt={altImg ?? ''} className={`${roundedVariant()} h-6 w-6 md:h-11 md:w-11`} />
 }
 export default CircularAvatar

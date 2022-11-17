@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Props = {
-  variant: 'Filled' | 'Outlined'
+  variant: 'Filled' | 'Outlined' | 'Flat'
   type?: 'Success' | 'Error'
   title: string
   icon?: JSX.Element
@@ -10,6 +10,7 @@ type Props = {
   buttonType?: 'submit' | 'reset' | 'button' | undefined
   form?: string
   disabled?: boolean
+  testid?: string
 }
 
 const Button = ({
@@ -22,6 +23,7 @@ const Button = ({
   buttonType,
   form,
   disabled,
+  testid,
 }: Props) => {
   const styles = () => {
     switch (variant) {
@@ -41,6 +43,8 @@ const Button = ({
           return 'outlined-error-button'
         }
         break
+      case 'Flat':
+        return `${type === 'Success' ? 'text-green-77' : 'text-red-400'}`;
       default:
         return 'filled-success-button'
     }
@@ -48,6 +52,7 @@ const Button = ({
 
   return (
     <button
+      data-testid={testid}
       disabled={disabled}
       form={form}
       type={buttonType}

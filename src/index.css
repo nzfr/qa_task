@@ -21,18 +21,21 @@ code {
 }
 
 @layer components {
-  .appBar {
+  .main-container{
+    @apply h-full w-full px-6 py-4 md:px-10 md:py-6 lg:px-14 lg:py-8
+  }
+  .app-bar {
     @apply w-full h-16 bg-appBarBg flex flex-row justify-between items-center;
     box-shadow: 0 3px 50px -1px rgba(50, 50, 71, 0.05);
   }
 
-  .questionCard {
+  .question-card {
     @apply flex flex-col justify-start items-start bg-questionCardBg rounded-lg;
     box-shadow: 0 3px 8px -1px rgba(50, 50, 71, 0.05), 0 0 1px rgba(12, 26, 75, 0.24);
   }
 
   .custom-button {
-    @apply flex flex-row justify-center items-center gap-2 text-white p-2 rounded-lg font-bold text-xs;
+    @apply flex flex-row justify-center items-center gap-1 md:gap-2 text-white p-1 md:p-2 rounded-lg font-bold text-xs;
   }
 
   .filled-success-button {
@@ -52,6 +55,6 @@ code {
   }
 
   .question-card-header {
-    @apply flex flex-row justify-start items-center gap-4;
+    @apply flex flex-row justify-start items-center gap-2 md:gap-4;
   }
 }

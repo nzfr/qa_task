@@ -5,6 +5,6 @@ type Props = {
 }
 
 const Card = ({ children }: Props) => {
-  return <div className='questionCard'>{children}</div>
+  return <div className='question-card'>{children}</div>
 }
 export default Card

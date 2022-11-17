@@ -60,6 +60,14 @@ const NewQuestionModal = () => {
       </ModalContent>
       <ModalFooter>
         <Button
+            disabled={mainState.newQuestionModal.state === 'loading'}
+            className='w-24 text-green-27'
+            title='انصراف'
+            variant='Flat'
+            onClick={() => dispatch(toggleDialog(false))}
+            type='Success'
+        />
+        <Button
           disabled={submitDisabled}
           buttonType='submit'
           form='new-question-form'
@@ -67,14 +75,6 @@ const NewQuestionModal = () => {
           variant='Filled'
           title='ایجاد سوال'
           type='Success'
-        />
-        <Button
-          disabled={mainState.newQuestionModal.state === 'loading'}
-          className='w-24'
-          title='انصراف'
-          variant='Filled'
-          onClick={() => dispatch(toggleDialog(false))}
-          type='Error'
         />
       </ModalFooter>
     </Modal>

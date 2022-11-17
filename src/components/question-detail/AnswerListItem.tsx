@@ -36,16 +36,16 @@ const AnswerListItem = ({ answerItem }: Props) => {
       <CardHeader>
         <div className='question-card-header'>
           <CircularAvatar img={answerItem.userAvatar} variant='SemiCircular' />
-          <h3 className='font-bold'>{answerItem.userName}</h3>
+          <h3 className='font-bold text-xs md:text-normal'>{answerItem.userName.substring(0,10) + '...'}</h3>
         </div>
         <div className='question-card-header'>
           <DataKeyValue title='ساعت' value={answerItem.createdTime} />
           <DataKeyValue title='تاریخ' value={answerItem.createdDate} />
-          <div className='flex flex-row justify-start items-center gap-1'>
+          <div className='flex flex-col sm:flex-row justify-start items-center gap-1'>
             <BiHappy className='text-purple-9C text-green-27' />
             <span className='text-grey-77 text-xs'>{toPersianNumbers(answerItem.likesCount)}</span>
           </div>
-          <div className='flex flex-row justify-start items-center gap-1'>
+          <div className='flex flex-col sm:flex-row justify-start items-center gap-1'>
             <BiSad className='text-purple-9C text-red-400' />
             <span className='text-grey-77 text-xs'>
               {toPersianNumbers(answerItem.dislikesCount)}
@@ -54,8 +54,8 @@ const AnswerListItem = ({ answerItem }: Props) => {
         </div>
       </CardHeader>
       <CardContent>
-        <p className='text-sm'>{answerItem.content}</p>
-        <div className='flex flex-row justify-end items-center gap-2'>
+        <p className='text-xs sm:text-sm'>{answerItem.content}</p>
+        <div className='flex flex-col sm:flex-row justify-end items-start md:items-center gap-2'>
           <Button
             disabled={feedbackState.status === 'loading'}
             onClick={() => toggleLike(true)}

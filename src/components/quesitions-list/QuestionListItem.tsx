@@ -22,12 +22,12 @@ const QuestionListItem = ({ questionItem, showImages }: Props) => {
       <CardHeader>
         <div className='question-card-header'>
           <CircularAvatar img={questionItem.avatar} variant='SemiCircular' />
-          <h3 className='font-bold'>{questionItem.questionsTitle}</h3>
+          <h3 className='font-bold text-xs md:text-normal'>{questionItem.questionsTitle}</h3>
         </div>
         <div className='question-card-header'>
           <DataKeyValue title='ساعت' value={questionItem.createdTime} />
           <DataKeyValue title='تاریخ' value={questionItem.createdDate} />
-          <div className='flex flex-row justify-start items-center gap-1'>
+          <div className='flex flex-col sm:flex-row justify-start items-center gap-1'>
             <FaRegCommentDots className='text-purple-9C' />
             <span className='text-grey-77 text-xs'>
               {toPersianNumbers(questionItem.answers.length)}

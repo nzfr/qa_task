@@ -11,7 +11,7 @@ const AppRoutes = ({ children }: Props) => {
     <BrowserRouter>
       <div className='min-h-screen bg-mainBg'>
         {children}
-        <div className='h-full px-14 py-8'>
+        <div className='main-container'>
           <Routes>
             {routes.map(function (item, index) {
               return <Route key={index} path={item.path} element={<item.component />} />

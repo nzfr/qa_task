@@ -6,6 +6,6 @@ type Props = {
 }
 
 const CardHeader = ({ children }: Props) => {
-  return <div className='appBar rounded-lg px-4 py-1'>{children}</div>
+  return <div className='app-bar rounded-lg px-4 py-1'>{children}</div>
 }
 export default CardHeader
