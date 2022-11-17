@@ -1,12 +1,10 @@
-import React, {ReactElement} from "react";
+import React, { ReactElement } from 'react'
 
 type Props = {
-    children: ReactElement | ReactElement[]
+  children: ReactElement | ReactElement[]
 }
 
-const Card = ({children}:Props) =>  {
-    return <div className='questionCard'>
-        {children}
-    </div>
+const Card = ({ children }: Props) => {
+  return <div className='questionCard'>{children}</div>
 }
-export default Card;
+export default Card

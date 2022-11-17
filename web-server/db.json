@@ -186,6 +186,28 @@
       "createdTime": "17:51",
       "createdDate": "2022/10/3",
       "id": "Z81X7Qz"
+    },
+    {
+      "questionId": "7IxZaAr",
+      "dislikesCount": 3,
+      "likesCount": 3,
+      "content": "sdsdds",
+      "userAvatar": "https://i.pravatar.cc/150?img=11",
+      "userName": "Mr.0.4378415454416129",
+      "createdTime": "0:46",
+      "createdDate": "2022/10/4",
+      "id": "L6bHzcZ"
+    },
+    {
+      "questionId": "7IxZaAr",
+      "dislikesCount": 1,
+      "likesCount": 1,
+      "content": "sdsdds",
+      "userAvatar": "https://i.pravatar.cc/150?img=11",
+      "userName": "Mr.0.7842737872393322",
+      "createdTime": "0:46",
+      "createdDate": "2022/10/4",
+      "id": "IIva-a3"
     }
   ]
 }
